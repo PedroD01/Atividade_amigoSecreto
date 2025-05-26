@@ -32,6 +32,10 @@ function embaralha(lista) {
 }
 
 
-/*function reiniciar() {
-    
-}*/
+function reiniciar() {
+    pessoa = [];
+    lista = [];
+    document.getElementById('lista-sorteio').innerHTML = '';
+    document.getElementById('nome-amigo').innerHTML = '';
+    document.getElementById('lista-amigos').innerHTML = '';
+}
