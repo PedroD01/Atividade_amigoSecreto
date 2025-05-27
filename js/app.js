@@ -1,5 +1,6 @@
 let pessoa = [];
 let lista = [];
+let lista2 = [];
 let sorteio = document.getElementById('lista-sorteio');
 
 function adicionar(){
@@ -7,15 +8,23 @@ function adicionar(){
     let quant_amigo = document.getElementById('lista-amigos');
     pessoa.push(amigo);
     lista.push(amigo);
-
+    
     quant_amigo.innerHTML = pessoa;
     
 }
 
 function sortear() {
    embaralha(lista);
-    
-   pessoa.forEach((element, index) => {sorteio.innerHTML += `${element} -> ${lista[index]}<br>`});
+   for(let i = 0; i < pessoa.length; i++){
+    if(pessoa[i] != lista[i]){
+        lista2.push(lista[i]);
+    }
+    else{
+        embaralha[lista];
+    };
+   }
+   pessoa.forEach((element, index) => {sorteio.innerHTML += `${element} -> ${lista2[index]}<br>`});
+   
 }
 
 //Algorítmo de Fisher-Yates
