@@ -6,15 +6,32 @@ let sorteio = document.getElementById('lista-sorteio');
 function adicionar(){
     let amigo = document.getElementById('nome-amigo').value;
     let quant_amigo = document.getElementById('lista-amigos');
+
     pessoa.push(amigo);
     lista.push(amigo);
+
+    let duplicates = pessoa.filter((item, index) => pessoa.indexOf(item) !== index);
+
+    if (amigo == '') {
+      alert("Favor coloque um nome válido");
+    }
+    else if (duplicates != ''){
+      alert("Favor colocar nomes diferentes");
+      pessoa.pop();
+      lista.pop();
+    }
     
     quant_amigo.innerHTML = pessoa;
     
 }
 
 function sortear() {
-   embaralha(lista);
+   embaralha(lista); 
+   /*if(lista.length <= 3){
+      alert("Favor adicionar mais de três nomes");
+      return;
+   }*/
+   
    for(let i = 0; i < pessoa.length; i++){
     if(pessoa[i] != lista[i]){
         lista2.push(lista[i]);
