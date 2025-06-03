@@ -26,11 +26,14 @@ function adicionar(){
 }
 
 function sortear() {
-   embaralha(lista); 
-   /*if(lista.length <= 3){
+    
+   if(lista.length <= 3){
       alert("Favor adicionar mais de três nomes");
-      return;
-   }*/
+      return;  
+   }
+   else{
+    embaralha(lista);
+   }
    
    for(let i = 0; i < pessoa.length; i++){
     if(pessoa[i] != lista[i]){
